@@ -1,3 +1,6 @@
 # Environment Folders
 /venv/
 /.idea/
+
+# Test Files
+test.json
