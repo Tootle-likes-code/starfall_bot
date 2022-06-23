@@ -15,4 +15,8 @@ class InfoService:
         :return: The definition of the word.
         """
         definition = self._definition_collector.get_definition(word)
-        return definition
+
+        if definition:
+            return definition
+
+        return f"I'm sorry, but I don't know the word '{word}' either."
