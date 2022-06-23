@@ -9,7 +9,7 @@ class InfoCog(Cog):
         self._info_service = info_service
 
     @commands.command()
-    def define(self, ctx: Context, *, word: str):
+    async def define(self, ctx: Context, *, word: str):
         definition = self._info_service.define(word)
 
         await ctx.send(f"> {word}: {definition}")
