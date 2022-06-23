@@ -27,6 +27,16 @@ class GetDefinitionTests(DefinitionSheetsCollectorTests):
 
         # Assert
         self.assertIsNone(result)
+        
+    def test_lowercase_known_word_returns_valid_value(self):
+        # Arrange
+        expected_results = '"One True Pairing", a romantic pairing you prefer above all others.'
+        
+        # Act
+        result = self.test_sheets_collector.get_definition("otp")
+        
+        # Assert
+        self.assertEqual(expected_results, result)
 
 
 if __name__ == '__main__':
