@@ -2,6 +2,9 @@
 /venv/
 /.idea/
 
+# Environment Files
+*.env
+
 # Google Credentials
 credentials.json
 token.json
