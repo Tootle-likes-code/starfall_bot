@@ -25,8 +25,8 @@ class DefinitionSheetsCollector(DefinitionCollector):
         credentials = self._get_credentials()
         results = self._request_sheets_data(credentials)
 
-        if word in results:
-            return results[word]
+        if word.lower() in results:
+            return results[word.lower()]
 
         return None
 
@@ -66,7 +66,7 @@ class DefinitionSheetsCollector(DefinitionCollector):
 
             results = {}
             for row in values:
-                results[row[0]] = row[1]
+                results[row[0].lower()] = row[1]
 
             return results
 
