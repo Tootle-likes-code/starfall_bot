@@ -2,5 +2,12 @@
 /venv/
 /.idea/
 
+# Google Credentials
+credentials.json
+token.json
+*/credentials.json
+*/token.json
+
 # Test Files
 test.json
+*/test.json
